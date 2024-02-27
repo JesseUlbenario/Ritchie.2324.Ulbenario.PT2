@@ -37,6 +37,36 @@ public class MainActivity extends AppCompatActivity {
         Num1 = (EditText) findViewById(R.id.editxtNo1);
         Num2 = (EditText) findViewById(R.id.editxtNo2);
 
+        Divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double No1 = Double.parseDouble(Num1.getText().toString());
+                double No2 = Double.parseDouble(Num2.getText().toString());
+                double quotient = No1 / No2;
+                ViewResult.setText(String.valueOf(quotient));
+            }
+        });
+
+        Multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double No1 = Double.parseDouble(Num1.getText().toString());
+                double No2 = Double.parseDouble(Num2.getText().toString());
+                double product = No1 * No2;
+                ViewResult.setText(String.valueOf(product));
+            }
+        });
+
+        Subtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double No1 = Double.parseDouble(Num1.getText().toString());
+                double No2 = Double.parseDouble(Num2.getText().toString());
+                double diff = No1 - No2;
+                ViewResult.setText(String.valueOf(diff));
+            }
+        });
+
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,8 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 double No1 = Double.parseDouble(Num1.getText().toString());
                 double No2 = Double.parseDouble(Num2.getText().toString());
                 double sum = No1 + No2;
-
-
+                ViewResult.setText(String.valueOf(sum));
             }
         });
     }
